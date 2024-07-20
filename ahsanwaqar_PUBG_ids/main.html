@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUBG ID Stock</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica+Neue:400,600&display=swap">
+    <!-- Custom CSS -->
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+</style>
+    
+    
+    <style>
+        body {
+            background-color: #f1f3f6;
+            font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+            padding: 20px;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: linear-gradient(135deg, #ffffff 0%, #f3f3f3 100%);
+            margin-bottom: 20px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            border-radius: 10px 10px 0 0;
+            max-height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .card-body {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .card-price {
+            color: #28a745;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #141414 0%, #232323 100%);
+            border: 1px solid rgba(54, 54, 54, 0.6);
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 150px;
+            height: 45px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #1d1d1d 0%, #2b2b2b 100%);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-content {
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+
+        .credentials-box {
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .credentials-box input {
+            border: none;
+            background: transparent;
+            width: calc(100% - 60px);
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .credentials-box .eye-icon,
+        .credentials-box .copy-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .credentials-box .copy-icon {
+            right: 35px;
+        }
+
+        .modal-screenshot {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .modal-header {
+            border-bottom: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-footer {
+            border-top: none;
+            justify-content: center;
+        }
+
+        .modal-body p {
+            margin: 10px 0;
+        }
+
+        .btn-view-fullscreen {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            padding: 5px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-view-fullscreen:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- Card Template -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img src="images/ID_1.jpg" class="card-img-top card-screenshot" alt="PUBG ID 1">
+                    <div class="card-body">
+                        <h5 class="card-title">PUBG ID 1</h5>
+                        <p class="card-price">R$ 4,000/- PKR</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#accountModal" onclick="loadModal(this)">
+                            <i class="bi bi-info-circle"></i> View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="accountModal" tabindex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="accountModalLabel">Account Details</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="" id="modalScreenshot" class="modal-screenshot" alt="Screenshot">
+                            <button class="btn-view-fullscreen" onclick="viewFullScreen()">
+                                <i class="bi bi-arrows-fullscreen"></i>
+                            </button>
+                            <input type="file" id="uploadImage" style="display: none;" onchange="updateImage(this)">
+                            <p>ID: M.shfiuq</p>
+                            <p>Price: R$ 4,000/- PKR</p>
+                            <p>Description: High-level PUBG ID with multiple achievements.</p>
+                            <div class="credentials-box">
+                                <input type="text" value="carder883@gmail.com" readonly id="email">
+                                <i class="bi bi-eye eye-icon" onclick="toggleVisibility('email')"></i>
+                                <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('email')"></i>
+                            </div>
+                            <div class="credentials-box">
+                                <input type="password" value="Zrrd77838" readonly id="password">
+                                <i class="bi bi-eye eye-icon" onclick="toggleVisibility('password')"></i>
+                                <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('password')"></i>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more cards as needed -->
+            
+            
+            
+            
+            
+                            <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img src="images/ID_2.jpg" class="card-img-top card-screenshot" alt="PUBG ID 2">
+                        <div class="card-body">
+                            <h5 class="card-title">PUBG ID 2</h5>
+                            <p class="card-price">4,000/- PKR</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#card1719666512373" onclick="loadModal(this)">
+                                <i class="bi bi-info-circle"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="card1719666512373" tabindex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="accountModalLabel">Account Details</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/ID_1.jpg" id="modalScreenshot" class="modal-screenshot" alt="Screenshot">
+                                <button class="btn-view-fullscreen" onclick="viewFullScreen()">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                                <input type="file" id="uploadImage" style="display: none;" onchange="updateImage(this)">
+                                <p>ID: PUBG ID 2</p>
+                                <p>Price: 4,000/- PKR</p>
+                                <p>Description: High-level PUBG ID with multiple achievements.</p>
+                                <div class="credentials-box">
+                                    <input type="text" value="alikha389@gmail.com" readonly id="emailcard1719666512373">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('emailcard1719666512373')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('emailcard1719666512373')"></i>
+                                </div>
+                                <div class="credentials-box">
+                                    <input type="password" value="29381928338" readonly id="passwordcard1719666512373">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('passwordcard1719666512373')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('passwordcard1719666512373')"></i>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            
+            
+          
+            
+      
+     
+            
+                  
+                        
+                              
+                                    
+                                                          <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img src="images/ID_3.jpg" class="card-img-top card-screenshot" alt="PUBG ID 3">
+                        <div class="card-body">
+                            <h5 class="card-title">PUBG ID 3</h5>
+                            <p class="card-price">7,000/- PKR</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#card1719680111989" onclick="loadModal(this)">
+                                <i class="bi bi-info-circle"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="card1719680111989" tabindex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="accountModalLabel">Account Details</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/ID_3.jpg" id="modalScreenshot" class="modal-screenshot" alt="Screenshot">
+                                <button class="btn-view-fullscreen" onclick="viewFullScreen()">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                                <input type="file" id="uploadImage" style="display: none;" onchange="updateImage(this)">
+                                <p>ID: PUBG ID 3</p>
+                                <p>Price: 7,000/- PKR</p>
+                                <p>Description: High-level PUBG ID with multiple achievements.</p>
+                                <div class="credentials-box">
+                                    <input type="text" value="Aliusman1838@gmail.com" readonly id="emailcard1719680111989">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('emailcard1719680111989')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('emailcard1719680111989')"></i>
+                                </div>
+                                <div class="credentials-box">
+                                    <input type="password" value="928282828282" readonly id="passwordcard1719680111989">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('passwordcard1719680111989')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('passwordcard1719680111989')"></i>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  
+       
+            
+                 
+                      
+                      
+                      
+                      
+                                      <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img src="images/ID_4.jpg" class="card-img-top card-screenshot" alt="PUBG ID 4">
+                        <div class="card-body">
+                            <h5 class="card-title">PUBG ID 4</h5>
+                            <p class="card-price">5,000/- PKR</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#card1719686794140" onclick="loadModal(this)">
+                                <i class="bi bi-info-circle"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="card1719686794140" tabindex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="accountModalLabel">Account Details</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/ID_4.jpg" id="modalScreenshot" class="modal-screenshot" alt="Screenshot">
+                                <button class="btn-view-fullscreen" onclick="viewFullScreen()">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                                <input type="file" id="uploadImage" style="display: none;" onchange="updateImage(this)">
+                                <p>ID: PUBG ID 4</p>
+                                <p>Price: 5,000/- PKR</p>
+                                <p>Description: High-level PUBG ID with multiple achievements.</p>
+                                <div class="credentials-box">
+                                    <input type="text" value="Osmanazwem8898@gmail.com" readonly id="emailcard1719686794140">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('emailcard1719686794140')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('emailcard1719686794140')"></i>
+                                </div>
+                                <div class="credentials-box">
+                                    <input type="password" value="928282828282" readonly id="passwordcard1719686794140">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('passwordcard1719686794140')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('passwordcard1719686794140')"></i>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                           
+        
+                                
+                                                        
+                                                                                
+                                                                                                        
+                                                                                                                                
+                                                                                                                                                        
+                                                                                                                                                                                                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img src="images/ID_5.jpg" class="card-img-top card-screenshot" alt="PUBG ID 5">
+                        <div class="card-body">
+                            <h5 class="card-title">PUBG ID 5</h5>
+                            <p class="card-price">3,500/- PKR</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#card1719686867098" onclick="loadModal(this)">
+                                <i class="bi bi-info-circle"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="card1719686867098" tabindex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="accountModalLabel">Account Details</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/ID_5.jpg" id="modalScreenshot" class="modal-screenshot" alt="Screenshot">
+                                <button class="btn-view-fullscreen" onclick="viewFullScreen()">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                                <input type="file" id="uploadImage" style="display: none;" onchange="updateImage(this)">
+                                <p>ID: PUBG ID 5</p>
+                                <p>Price: 3,500/- PKR</p>
+                                <p>Description: High-level PUBG ID with multiple achievements.</p>
+                                <div class="credentials-box">
+                                    <input type="text" value="AliZz8898@gmail.com" readonly id="emailcard1719686867098">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('emailcard1719686867098')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('emailcard1719686867098')"></i>
+                                </div>
+                                <div class="credentials-box">
+                                    <input type="password" value="928282828282" readonly id="passwordcard1719686867098">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('passwordcard1719686867098')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('passwordcard1719686867098')"></i>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                    
+       
+                                          
+                                                                             
+                                                                                                                
+                                                                                                                                                   
+                                                                                                                                                                                      
+                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                                            
+                                                                                                                                                                            <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img src="images/ID_6.jpg" class="card-img-top card-screenshot" alt="PUBG ID 6">
+                        <div class="card-body">
+                            <h5 class="card-title">PUBG ID 6</h5>
+                            <p class="card-price">4,500/- PKR</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#card1719686894489" onclick="loadModal(this)">
+                                <i class="bi bi-info-circle"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="card1719686894489" tabindex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="accountModalLabel">Account Details</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/ID_6.jpg" id="modalScreenshot" class="modal-screenshot" alt="Screenshot">
+                                <button class="btn-view-fullscreen" onclick="viewFullScreen()">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                                <input type="file" id="uploadImage" style="display: none;" onchange="updateImage(this)">
+                                <p>ID: PUBG ID 6</p>
+                                <p>Price: 4,500/- PKR</p>
+                                <p>Description: High-level PUBG ID with multiple achievements.</p>
+                                <div class="credentials-box">
+                                    <input type="text" value="mrajaan2228@gmail.com" readonly id="emailcard1719686894489">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('emailcard1719686894489')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('emailcard1719686894489')"></i>
+                                </div>
+                                <div class="credentials-box">
+                                    <input type="password" value="928282828282" readonly id="passwordcard1719686894489">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('passwordcard1719686894489')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('passwordcard1719686894489')"></i>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                                                                                                                    
+                                                                                                                                                                                  
+                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                                                                                            
+                                      <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img src="images/ID_7.jpg" class="card-img-top card-screenshot" alt="PUBG ID 7">
+                        <div class="card-body">
+                            <h5 class="card-title">PUBG ID 7</h5>
+                            <p class="card-price">7,500/- PKR</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#card1719686950648" onclick="loadModal(this)">
+                                <i class="bi bi-info-circle"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="card1719686950648" tabindex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="accountModalLabel">Account Details</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/ID_7.jpg" id="modalScreenshot" class="modal-screenshot" alt="Screenshot">
+                                <button class="btn-view-fullscreen" onclick="viewFullScreen()">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                                <input type="file" id="uploadImage" style="display: none;" onchange="updateImage(this)">
+                                <p>ID: PUBG ID 7</p>
+                                <p>Price: 7,500/- PKR</p>
+                                <p>Description: High-level PUBG ID with multiple achievements.</p>
+                                <div class="credentials-box">
+                                    <input type="text" value="umairali00034@gmail.com" readonly id="emailcard1719686950648">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('emailcard1719686950648')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('emailcard1719686950648')"></i>
+                                </div>
+                                <div class="credentials-box">
+                                    <input type="password" value="928282828282" readonly id="passwordcard1719686950648">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('passwordcard1719686950648')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('passwordcard1719686950648')"></i>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                              <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img src="images/ID_8.jpg" class="card-img-top card-screenshot" alt="PUBG ID 8">
+                        <div class="card-body">
+                            <h5 class="card-title">PUBG ID 8</h5>
+                            <p class="card-price">6,000/- PKR</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#card1719686993167" onclick="loadModal(this)">
+                                <i class="bi bi-info-circle"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="card1719686993167" tabindex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="accountModalLabel">Account Details</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/ID_8.jpg" id="modalScreenshot" class="modal-screenshot" alt="Screenshot">
+                                <button class="btn-view-fullscreen" onclick="viewFullScreen()">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                                <input type="file" id="uploadImage" style="display: none;" onchange="updateImage(this)">
+                                <p>ID: PUBG ID 8</p>
+                                <p>Price: 6,000/- PKR</p>
+                                <p>Description: High-level PUBG ID with multiple achievements.</p>
+                                <div class="credentials-box">
+                                    <input type="text" value="umairg990@gmail.com" readonly id="emailcard1719686993167">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('emailcard1719686993167')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('emailcard1719686993167')"></i>
+                                </div>
+                                <div class="credentials-box">
+                                    <input type="password" value="928282828282" readonly id="passwordcard1719686993167">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('passwordcard1719686993167')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('passwordcard1719686993167')"></i>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                                                                                                                                          
+                                                                                                                                                          
+                                                                                                                                                          
+                                                                                                                                                          
+                                                                                                                                                          
+                                                                                                                                                                 <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img src="images/ID_9.jpg" class="card-img-top card-screenshot" alt="PUBG ID 9">
+                        <div class="card-body">
+                            <h5 class="card-title">PUBG ID 9</h5>
+                            <p class="card-price">5,000/- PKR</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#card1719687034466" onclick="loadModal(this)">
+                                <i class="bi bi-info-circle"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="card1719687034466" tabindex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="accountModalLabel">Account Details</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/ID_9.jpg" id="modalScreenshot" class="modal-screenshot" alt="Screenshot">
+                                <button class="btn-view-fullscreen" onclick="viewFullScreen()">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                                <input type="file" id="uploadImage" style="display: none;" onchange="updateImage(this)">
+                                <p>ID: PUBG ID 9</p>
+                                <p>Price: 5,000/- PKR</p>
+                                <p>Description: High-level PUBG ID with multiple achievements.</p>
+                                <div class="credentials-box">
+                                    <input type="text" value="abubakrss330@gmail.com" readonly id="emailcard1719687034466">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('emailcard1719687034466')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('emailcard1719687034466')"></i>
+                                </div>
+                                <div class="credentials-box">
+                                    <input type="password" value="928282828282" readonly id="passwordcard1719687034466">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('passwordcard1719687034466')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('passwordcard1719687034466')"></i>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                     
+                                                             
+                                                                                                                                                          
+                                                                                                                                                                                                                                                       
+                                                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img src="images/ID_10.jpg" class="card-img-top card-screenshot" alt="PUBG ID 10">
+                        <div class="card-body">
+                            <h5 class="card-title">PUBG ID 10</h5>
+                            <p class="card-price">6,500/- PKR</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#card1719687074629" onclick="loadModal(this)">
+                                <i class="bi bi-info-circle"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="card1719687074629" tabindex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="accountModalLabel">Account Details</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/ID_10.jpg" id="modalScreenshot" class="modal-screenshot" alt="Screenshot">
+                                <button class="btn-view-fullscreen" onclick="viewFullScreen()">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                                <input type="file" id="uploadImage" style="display: none;" onchange="updateImage(this)">
+                                <p>ID: PUBG ID 10</p>
+                                <p>Price: 6,500/- PKR</p>
+                                <p>Description: High-level PUBG ID with multiple achievements.</p>
+                                <div class="credentials-box">
+                                    <input type="text" value="osama3380@gmail.com" readonly id="emailcard1719687074629">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('emailcard1719687074629')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('emailcard1719687074629')"></i>
+                                </div>
+                                <div class="credentials-box">
+                                    <input type="password" value="928282828282" readonly id="passwordcard1719687074629">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('passwordcard1719687074629')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('passwordcard1719687074629')"></i>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+       
+                                                                                                         
+                                                                                                                                                                                                           
+                                                                                                                                                                                                                                                                                                             
+                                                                                                                                                                                                                                                                                                                                                                                                               
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img src="images/ID_11.jpg" class="card-img-top card-screenshot" alt="PUBG ID 11">
+                        <div class="card-body">
+                            <h5 class="card-title">PUBG ID 11</h5>
+                            <p class="card-price">5,500/- PKR</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#card1719687104647" onclick="loadModal(this)">
+                                <i class="bi bi-info-circle"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="card1719687104647" tabindex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="accountModalLabel">Account Details</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/ID_11.jpg" id="modalScreenshot" class="modal-screenshot" alt="Screenshot">
+                                <button class="btn-view-fullscreen" onclick="viewFullScreen()">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                                <input type="file" id="uploadImage" style="display: none;" onchange="updateImage(this)">
+                                <p>ID: PUBG ID 11</p>
+                                <p>Price: 5,500/- PKR</p>
+                                <p>Description: High-level PUBG ID with multiple achievements.</p>
+                                <div class="credentials-box">
+                                    <input type="text" value="os293930@gmail.com" readonly id="emailcard1719687104647">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('emailcard1719687104647')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('emailcard1719687104647')"></i>
+                                </div>
+                                <div class="credentials-box">
+                                    <input type="password" value="928282828282" readonly id="passwordcard1719687104647">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('passwordcard1719687104647')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('passwordcard1719687104647')"></i>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                                                                                              
+            
+            
+            
+            
+            
+            
+            
+            
+                            <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img src="images/ID_12.jpg" class="card-img-top card-screenshot" alt="PUBG ID 12">
+                        <div class="card-body">
+                            <h5 class="card-title">PUBG ID 12</h5>
+                            <p class="card-price">3,500/- PKR</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#card1719687136293" onclick="loadModal(this)">
+                                <i class="bi bi-info-circle"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="card1719687136293" tabindex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="accountModalLabel">Account Details</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/ID_12.jpg" id="modalScreenshot" class="modal-screenshot" alt="Screenshot">
+                                <button class="btn-view-fullscreen" onclick="viewFullScreen()">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                                <input type="file" id="uploadImage" style="display: none;" onchange="updateImage(this)">
+                                <p>ID: PUBG ID 12</p>
+                                <p>Price: 3,500/- PKR</p>
+                                <p>Description: High-level PUBG ID with multiple achievements.</p>
+                                <div class="credentials-box">
+                                    <input type="text" value="Jameel930@gmail.com" readonly id="emailcard1719687136293">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('emailcard1719687136293')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('emailcard1719687136293')"></i>
+                                </div>
+                                <div class="credentials-box">
+                                    <input type="password" value="928282828282" readonly id="passwordcard1719687136293">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('passwordcard1719687136293')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('passwordcard1719687136293')"></i>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+            
+                
+                    
+                        
+                            
+            
+                                
+                                                    
+                                                                        
+                                                                                                            <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img src="images/ID_13.jpg" class="card-img-top card-screenshot" alt="PUBG ID 13">
+                        <div class="card-body">
+                            <h5 class="card-title">PUBG ID 13</h5>
+                            <p class="card-price">7,000/- PKR</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#card1719687263817" onclick="loadModal(this)">
+                                <i class="bi bi-info-circle"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="card1719687263817" tabindex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="accountModalLabel">Account Details</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/ID_13.jpg" id="modalScreenshot" class="modal-screenshot" alt="Screenshot">
+                                <button class="btn-view-fullscreen" onclick="viewFullScreen()">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                                <input type="file" id="uploadImage" style="display: none;" onchange="updateImage(this)">
+                                <p>ID: PUBG ID 13</p>
+                                <p>Price: 7,000/- PKR</p>
+                                <p>Description: High-level PUBG ID with multiple achievements.</p>
+                                <div class="credentials-box">
+                                    <input type="text" value="Noori7860@gmail.com" readonly id="emailcard1719687263817">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('emailcard1719687263817')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('emailcard1719687263817')"></i>
+                                </div>
+                                <div class="credentials-box">
+                                    <input type="password" value="928282828282" readonly id="passwordcard1719687263817">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('passwordcard1719687263817')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('passwordcard1719687263817')"></i>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                
+                                    
+                                        
+                                            
+                                                
+                                                
+                                                
+                                                
+                                 <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img src="images/ID_14.jpg" class="card-img-top card-screenshot" alt="PUBG ID 14">
+                        <div class="card-body">
+                            <h5 class="card-title">PUBG ID 14</h5>
+                            <p class="card-price">3,000/- PKR</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#card1719687343739" onclick="loadModal(this)">
+                                <i class="bi bi-info-circle"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="card1719687343739" tabindex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="accountModalLabel">Account Details</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/ID_14.jpg" id="modalScreenshot" class="modal-screenshot" alt="Screenshot">
+                                <button class="btn-view-fullscreen" onclick="viewFullScreen()">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                                <input type="file" id="uploadImage" style="display: none;" onchange="updateImage(this)">
+                                <p>ID: PUBG ID 14</p>
+                                <p>Price: 3,000/- PKR</p>
+                                <p>Description: High-level PUBG ID with multiple achievements.</p>
+                                <div class="credentials-box">
+                                    <input type="text" value="Starplu970@gmail.com" readonly id="emailcard1719687343739">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('emailcard1719687343739')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('emailcard1719687343739')"></i>
+                                </div>
+                                <div class="credentials-box">
+                                    <input type="password" value="928282828282" readonly id="passwordcard1719687343739">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('passwordcard1719687343739')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('passwordcard1719687343739')"></i>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                           
+                                                
+                                                
+  
+                                                
+                                                                                              
+                                                                                                                                            
+                                                                                                                                                                                          
+                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                      <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img src="images/ID_15.jpg" class="card-img-top card-screenshot" alt="PUBG ID 15">
+                        <div class="card-body">
+                            <h5 class="card-title">PUBG ID 15</h5>
+                            <p class="card-price">4,000/- PKR</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#card1719687382833" onclick="loadModal(this)">
+                                <i class="bi bi-info-circle"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="card1719687382833" tabindex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="accountModalLabel">Account Details</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/ID_15.jpg" id="modalScreenshot" class="modal-screenshot" alt="Screenshot">
+                                <button class="btn-view-fullscreen" onclick="viewFullScreen()">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                                <input type="file" id="uploadImage" style="display: none;" onchange="updateImage(this)">
+                                <p>ID: PUBG ID 15</p>
+                                <p>Price: 4,000/- PKR</p>
+                                <p>Description: High-level PUBG ID with multiple achievements.</p>
+                                <div class="credentials-box">
+                                    <input type="text" value="JohnnG99@gmail.com" readonly id="emailcard1719687382833">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('emailcard1719687382833')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('emailcard1719687382833')"></i>
+                                </div>
+                                <div class="credentials-box">
+                                    <input type="password" value="928282828282" readonly id="passwordcard1719687382833">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('passwordcard1719687382833')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('passwordcard1719687382833')"></i>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                                          
+      
+                                                
+                                                                                          
+                                                                                                                                  
+                                                                                                                                                                            
+                                                                                                                                                                                                                      
+                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                                                                                                                                    <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img src="images/ID_16.jpg" class="card-img-top card-screenshot" alt="PUBG ID 16">
+                        <div class="card-body">
+                            <h5 class="card-title">PUBG ID 16</h5>
+                            <p class="card-price">7,500/- PKR</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#card1719687416434" onclick="loadModal(this)">
+                                <i class="bi bi-info-circle"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="card1719687416434" tabindex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="accountModalLabel">Account Details</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/ID_16.jpg" id="modalScreenshot" class="modal-screenshot" alt="Screenshot">
+                                <button class="btn-view-fullscreen" onclick="viewFullScreen()">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                                <input type="file" id="uploadImage" style="display: none;" onchange="updateImage(this)">
+                                <p>ID: PUBG ID 16</p>
+                                <p>Price: 7,500/- PKR</p>
+                                <p>Description: High-level PUBG ID with multiple achievements.</p>
+                                <div class="credentials-box">
+                                    <input type="text" value="afzzal773@gmail.com" readonly id="emailcard1719687416434">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('emailcard1719687416434')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('emailcard1719687416434')"></i>
+                                </div>
+                                <div class="credentials-box">
+                                    <input type="password" value="928282828282" readonly id="passwordcard1719687416434">
+                                    <i class="bi bi-eye eye-icon" onclick="toggleVisibility('passwordcard1719687416434')"></i>
+                                    <i class="bi bi-clipboard copy-icon" onclick="copyToClipboard('passwordcard1719687416434')"></i>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                                      
+   
+   <!--add another card below -->
+                                                       
+                                                                                                           
+                                                                                                                                                               
+                                                                                                                                                                                                                   
+                                                                                                                                                                                                                                                                       
+                                                                                                                                                                                                   
+                                                                                                                                                                                                                                                                                                                                                                               
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <!-- no html code Should be add below this-->                                    
+        </div>
+    </div>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS for Modal and Image Upload -->
+    <script>
+        function loadModal(button) {
+            const card = button.closest('.card');
+            const imgSrc = card.querySelector('.card-screenshot').src;
+            document.getElementById('modalScreenshot').src = imgSrc;
+        }
+
+        document.getElementById('modalScreenshot').onclick = function () {
+            document.getElementById('uploadImage').click();
+        };
+
+        function updateImage(input) {
+            const file = input.files[0];
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const newSrc = e.target.result;
+                document.getElementById('modalScreenshot').src = newSrc;
+                const cardImg = document.querySelector('.card-img-top');
+                cardImg.src = newSrc;
+            };
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function toggleVisibility(inputId) {
+            const input = document.getElementById(inputId);
+            if (input.type === 'password') {
+                input.type = 'text';
+            } else {
+                input.type = 'password';
+            }
+        }
+
+        function copyToClipboard(inputId) {
+            const input = document.getElementById(inputId);
+            input.select();
+            document.execCommand('copy');
+            alert('Copied to clipboard: ' + input.value);
+        }
+
+        function viewFullScreen() {
+            const img = document.getElementById('modalScreenshot');
+            if (img.requestFullscreen) {
+                img.requestFullscreen();
+            } else if (img.mozRequestFullScreen) { // Firefox
+                img.mozRequestFullScreen();
+            } else if (img.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                img.webkitRequestFullscreen();
+            } else if (img.msRequestFullscreen) { // IE/Edge
+                img.msRequestFullscreen();
+            }
+        }
+    </script>
+</body>
+
+</html>
